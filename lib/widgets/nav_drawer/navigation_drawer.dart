@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:profile/constant.dart';
 import 'package:profile/responsive_builder.dart';
-import 'package:responsive_builder/responsive_builder.dart';
-import 'components/navigation_drawer_footer.dart';
-import 'components/navigation_drawer_header.dart';
 import 'components/drawer_item.dart';
 
-class NavigationDrawer extends StatelessWidget {
-  const NavigationDrawer({Key? key}) : super(key: key);
-
+class CustomNavigationDrawer extends StatelessWidget {
+  const CustomNavigationDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:ResponsiveBuilderr.isTablet(context)? MediaQuery.of(context).size.width * 0.3:MediaQuery.of(context).size.width * 0.5,
+      width: ResponsiveBuilderr.isTablet(context)
+          ? MediaQuery.of(context).size.width * 0.3
+          : MediaQuery.of(context).size.width * 0.5,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.horizontal(
             left: Radius.circular(0), right: Radius.circular(16)),
@@ -31,9 +29,8 @@ class NavigationDrawer extends StatelessWidget {
         ),
       ),
       child: Column(
-
         children: const [
-         // NavigationDrawerHeader(),
+          // NavigationDrawerHeader(),
           DrawerItem('Home', Icons.home, homeRoute),
           DrawerItem('Portfolio', Icons.bar_chart, portfolioRoute),
           DrawerItem('Projects', Icons.palette, projectRoute),

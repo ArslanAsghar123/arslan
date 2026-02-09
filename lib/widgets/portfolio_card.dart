@@ -22,9 +22,10 @@ class SkillDetailsContainer extends StatelessWidget {
             child: Text(
               skill,
               style: GoogleFonts.titilliumWeb(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  color: Colors.white),
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: Colors.white,
+              ),
               textAlign: TextAlign.center,
             ),
           );
@@ -48,15 +49,10 @@ class SkillDetailsContainer extends StatelessWidget {
                     height: 1,
                   ),
                 ),
-                const SizedBox(
-                  height: 1,
-                ),
+                const SizedBox(height: 1),
                 Text(
                   data.subheading[i - 1],
-                  style: TextStyle(
-                    color: kWhite,
-                    fontSize: 12,
-                  ),
+                  style: TextStyle(color: kWhite, fontSize: 12),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 10),
@@ -75,14 +71,15 @@ class SkillDetailsContainer extends StatelessWidget {
                     }
                   },
                   child: Container(
-                    padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 8),
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 2,
+                      horizontal: 8,
+                    ),
                     margin: const EdgeInsets.all(2),
                     decoration: BoxDecoration(
                       color: const Color(0xffffffff),
                       border: Border.all(color: Colors.white, width: 2),
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(20),
-                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(20)),
                     ),
                     child: Text(
                       data.buttonText[i - 1],

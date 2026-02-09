@@ -3,9 +3,8 @@ import 'package:profile/constant.dart';
 import 'package:profile/locator.dart';
 import 'package:profile/routes/generate_route.dart';
 import 'package:profile/routes/navigation_service.dart';
-import 'package:profile/views/homescreen/home_navigator.dart';
 import 'package:profile/views/navigation.dart';
-import 'package:profile/widgets/nav_drawer/navigation_drawer.dart';
+import 'package:profile/widgets/nav_drawer/navigation_drawer.dart' as custom;
 import 'package:responsive_builder/responsive_builder.dart';
 
 class LayoutTemplate extends StatelessWidget {
@@ -18,7 +17,7 @@ class LayoutTemplate extends StatelessWidget {
         endDrawer: (sizingInformation.deviceScreenType ==
                     DeviceScreenType.mobile ||
                 sizingInformation.deviceScreenType == DeviceScreenType.tablet)
-            ? const NavigationDrawer()
+            ? const custom.CustomNavigationDrawer()
             : null,
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.black,

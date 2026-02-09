@@ -5,8 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:profile/constant.dart';
 import 'package:profile/widgets/portfolio_card.dart';
 
-
-
 const double degrees2Radians = math.pi / 180.0;
 
 class AnimatedSkillDisplay extends StatefulWidget {
@@ -117,7 +115,7 @@ class AnimatedSkillDisplayState extends State<AnimatedSkillDisplay>
                       'Flutter',
                       1,
                       FaIcon(
-                        MyFlutterApp.mediamodifier_design__1_,
+                        MyFlutterApp.mediamodifierDesign1,
                         color: hover == 1 ? kPink : kWhite,
                         size: 55,
                       ),

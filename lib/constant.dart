@@ -1,18 +1,15 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:profile/model/portfolio.dart';
 
-ButtonStyle? menuButtonStyle = TextButton.styleFrom(
-    splashFactory: NoSplash.splashFactory,
-    backgroundColor: Colors.transparent,
-    onSurface: null,
-    primary: textSecondary,
-    textStyle: buttonTextStyle,
-    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16));
+// Colors
+const Color primaryColor = Color(0xff252733);
+const Color secondaryColor = Color(0xff333645);
+const Color background = Color(0xff36454F);
+const Color textPrimary = Colors.white;
+const Color textSecondary = Colors.white;
 
-// Simple
+// Text Styles
 TextStyle headlineTextStyle = GoogleFonts.montserrat(
     textStyle: const TextStyle(
         fontSize: 26,
@@ -24,11 +21,14 @@ TextStyle buttonTextStyle = GoogleFonts.montserrat(
     textStyle:
         const TextStyle(fontSize: 15, color: textPrimary, letterSpacing: 1));
 
-const Color primaryColor = Color(0xff252733);
-const Color secondaryColor = Color(0xff333645);
-const Color background = Color(0x36454F);
-const Color textPrimary = Colors.white;
-const Color textSecondary = Colors.white;
+// Button Style
+ButtonStyle? menuButtonStyle = TextButton.styleFrom(
+    foregroundColor: textSecondary,
+    splashFactory: NoSplash.splashFactory,
+    disabledForegroundColor: Colors.grey.withOpacity(0.38),
+    backgroundColor: Colors.transparent,
+    textStyle: buttonTextStyle,
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16));
 
 List<Color> kColors = [
   Colors.deepOrangeAccent,
@@ -42,16 +42,16 @@ List<Color> kColors = [
 ];
 // Color kWhite = Color(0xffd3d4d4);
 Color kWhite = Colors.white;
-Color kDarkWhite = Color(0xff787a7b);
+Color kDarkWhite = const Color(0xff787a7b);
 // Color kBackground = Color(0xff212324);
 // Color kCardBackground = Color(0xff18191A);
 
-Color kBackground = Color(0xff141414);
-Color kCardBackground = Color(0xaa202020);
-Color kBackgroundAccent = Color(0xff181818);
+Color kBackground = const Color(0xff141414);
+Color kCardBackground = const Color(0xaa202020);
+Color kBackgroundAccent = const Color(0xff181818);
 
-Color kDeepBlue = Color(0xff4F46E5);
-Color kPink = Color(0xff0365ff);
+Color kDeepBlue = const Color(0xff4F46E5);
+Color kPink = const Color(0xff0365ff);
 Color kPinkAccent = Colors.pinkAccent;
 
 const String homeRoute = 'Home';
@@ -80,7 +80,7 @@ class MyFlutterApp {
   static const _kFontFam = 'MyFlutterApp';
   static const String? _kFontPkg = null;
 
-  static const IconData mediamodifier_design__1_ =
+  static const IconData mediamodifierDesign1 =
       IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
 
@@ -204,7 +204,6 @@ Map<String, Skill> kSkills = {
       'View More',
       'View More',
       'View More',
-
     ],
     links: [
       '',
