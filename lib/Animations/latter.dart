@@ -51,7 +51,7 @@ class _WordState extends State<Word> with SingleTickerProviderStateMixin {
         if (sizingInformation.isDesktop) {
           fontsize = 60;
         } else if (sizingInformation.isTablet) {
-          fontsize = 50;
+          fontsize = 49;
         } else {
           fontsize = 40;
         }
